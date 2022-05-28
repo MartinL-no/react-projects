@@ -6,7 +6,7 @@ function Card(props) {
             <img className="card--img" src={props.imageUrl} alt={props.title}/>
             <div className="card--data">
                 <span className="card--location">{props.location}</span>
-                <a className="card--googleMapsUrl" href={props.googleMapsUrl}>{props.title}</a>
+                <a className="card--googleMapsUrl" href={props.googleMapsUrl}>View on Google Maps</a>
 
                 <h2 className="card--title">{props.title}</h2>
                 <p className="card--dates">{props.startDate} - {props.endDate}</p>
