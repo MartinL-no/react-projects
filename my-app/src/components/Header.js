@@ -2,7 +2,10 @@ import React from "react"
 
 function Header() {
     return(
-        <h1>My Travel Journal</h1>
+        <header>
+            <img className="header--icon" src="./img/Fill 213.png" />
+            <h1 className="header--title">My Travel Journal</h1>
+        </header>
     )
 }
 
