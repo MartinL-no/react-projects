@@ -3,7 +3,7 @@ import React from "react"
 function Card(props) {
     return(
         <div className="card">
-            <img className="card--img" src="https://source.unsplash.com/WLxQvbMyfas" alt="test"/>
+            <img className="card--img" src={props.imageUrl} alt={props.title}/>
             <div className="card--data">
                 <span className="card--location">{props.location}</span>
                 <span className="card--googleMapsUrl">{props.googleMapsUrl}</span>
