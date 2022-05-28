@@ -6,10 +6,10 @@ function Card(props) {
             <img className="card--img" src={props.imageUrl} alt={props.title}/>
             <div className="card--data">
                 <span className="card--location">{props.location}</span>
-                <span className="card--googleMapsUrl">{props.googleMapsUrl}</span>
+                <a className="card--googleMapsUrl" href={props.googleMapsUrl}>{props.title}</a>
 
                 <h2 className="card--title">{props.title}</h2>
-                <p className="card--dates">{props.startDate} {props.endDate}</p>
+                <p className="card--dates">{props.startDate} - {props.endDate}</p>
                 <p className="card--description">{props.description}</p>
             </div>
         </div>
