@@ -1,7 +1,8 @@
 import React from "react"
-import { decode } from "he";
 import Question from "./Question"
-// import {nanoid} from 'https://cdn.jsdelivr.net/npm/nanoid/nanoid.js'
+
+// dependency added to allow correct rendering of HTML encoded API data
+import { decode } from "he";
 
 function Quiz(props) {
     const [quizData, setQuizData] = React.useState([])
@@ -26,19 +27,21 @@ function Quiz(props) {
                             correctAnswer: decode(item.correct_answer),
                             selectAnswer: {selectAnswer},
                             userAnswer: "",
-                            isRevealed: false,
-                            correctGuess: false,
+                            isRevealed: false, // decides whether css styles showing correct/incorrect answers are shown
+                            correctGuess: false, // decides whether correct answer is shown (in combination with isRevealed)
                         }
                     })
                 })
             })
     }, [])
-
+    // Reset all variables and return screen to introduction
     function resetGame() {
         setQuizData([])
         setScore("")
         props.setHasStarted(false)
     }
+
+    // Adds currently selected answer to state
     function selectAnswer(id, answer) {
         setQuizData(prevState => prevState.map(question => {
             if (question.id === id) {
@@ -49,6 +52,7 @@ function Quiz(props) {
         }))
     }
 
+    // OnClick for "Submit Answers" button - checked users selected answers against correct one saved in state
     function submitAnswers() {
         setQuizData(prevState =>{
             return prevState.map(item =>{
@@ -69,7 +73,7 @@ function Quiz(props) {
             })
         })
     }
-
+    // Stores array of Question components with props defined from data recieved from API
     const questionElements = quizData.map(question => {
         return (
             <Question 
@@ -79,7 +83,7 @@ function Quiz(props) {
                 answers={question.answers}
                 correctAnswer={question.correctAnswer}
                 userAnswer={question.userAnswer}
-                selectAnswer={selectAnswer}
+                selectAnswer={selectAnswer} // function
                 correctGuess={question.correctGuess}
                 isRevealed={question.isRevealed}
             />
@@ -91,7 +95,7 @@ function Quiz(props) {
         <div className="quiz-container">
             <div>{questionElements}</div>
             <footer>
-                {score && <p className="score">You scored {score}/{quizData.length} correct answers</p>}
+                {{score && <p className="score">You scored {score}/{quizData.length} correct answers</p>}} 
                 {quizData.length === 5 && !score && <button className="quiz-btn" onClick={submitAnswers}>Submit Answers</button>}
                 {score && <button className="quiz-btn" onClick={resetGame}>Start New Game</button>}
             </footer>

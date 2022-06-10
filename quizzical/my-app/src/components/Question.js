@@ -1,7 +1,7 @@
 import React from "react"
-// import {nanoid} from 'https://cdn.jsdelivr.net/npm/nanoid/nanoid.js'
 
 function Question(props) {
+    // Conditional styling of answers
     const answerElements = props.answers.map(answer => {
         const selected = answer === props.userAnswer && "selected"
         const correct =
