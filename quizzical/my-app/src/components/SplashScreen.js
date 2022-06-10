@@ -4,7 +4,7 @@ function Splash(props) {
     return (
         <div className="splash-container">
             <h1>Quizzical</h1>
-            <h3>An React API based Quiz Program</h3>
+            <h3>A React API Based Quiz Program</h3>
             <button  className="splash-btn" onClick={() => props.setHasStarted(true)}>Start Quiz</button>
         </div>
     )
