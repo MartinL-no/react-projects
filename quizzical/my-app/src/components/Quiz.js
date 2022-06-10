@@ -6,7 +6,7 @@ import { decode } from "he";
 
 function Quiz(props) {
     const [quizData, setQuizData] = React.useState([])
-    const [score, setScore] = React.useState("")
+    const [score, setScore] = React.useState()
     
 
     React.useEffect(() => {
@@ -95,7 +95,7 @@ function Quiz(props) {
         <div className="quiz-container">
             <div>{questionElements}</div>
             <footer>
-                {{score && <p className="score">You scored {score}/{quizData.length} correct answers</p>}} 
+                {score && <p className="score">You scored {score}/{quizData.length} correct answers</p>} 
                 {quizData.length === 5 && !score && <button className="quiz-btn" onClick={submitAnswers}>Submit Answers</button>}
                 {score && <button className="quiz-btn" onClick={resetGame}>Start New Game</button>}
             </footer>
