@@ -6,4 +6,4 @@
 
 ## Apps
 
-#### [Quizzical](https://github.com/martinlrmr/react-projects/tree/main/quizzical) - An API based Quiz App built with React
+#### [Quizzical](https://github.com/martinlrmr/react-projects/tree/main/quizzical) - An API based Quiz App
