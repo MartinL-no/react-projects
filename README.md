@@ -1,5 +1,9 @@
 # React Projects
 
-React projects I have made to develop my understanding of the library
+## Overview
 
-### [Quizzical](https://martinlrmr-quizzical.netlify.app/) - An API based Quiz App built with React
+#### A collection of React projects (ongoing) I have made to develop my understanding of the library
+
+## Apps
+
+#### [Quizzical](https://github.com/martinlrmr/react-projects/tree/main/quizzical) - An API based Quiz App built with React
