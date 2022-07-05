@@ -21,6 +21,6 @@ This app was created as coursework for the Scrimba Front End Career Path. It pul
 
 ## Tech Used / Dependencies
 
-- This is a React App boostrapped with CRA
+- This is a React App bootstrapped with CRA
 
 - Fonts from [Google Fonts](https://fonts.google.com/)
