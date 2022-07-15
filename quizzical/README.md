@@ -9,7 +9,7 @@ This app was created as coursework for the Scrimba Front End Career Path. It pul
 
 ## Features
 
-- The app consist of two pages, a splash page and quiz page, which are as seperate js files/components
+- The app consist of two pages, a splash page and quiz page, which are as seperate React Js files/components
 
 - The app pulls data from the API and uses it to dynamically render the questions and answers for the Quiz
 
