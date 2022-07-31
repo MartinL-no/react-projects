@@ -36,7 +36,7 @@ function InfoSection() {
         </S.P>
         <S.P>
           You can see the source code
-          <S.SectionA href="https://github.com/martinlrmr/react-projects" target="_blank" rel="noreferrer"> here</S.SectionA>
+          <S.SectionA href="https://github.com/martinlrmr/react-projects/tree/main/reddit-timer" target="_blank" rel="noreferrer"> here</S.SectionA>
           .
         </S.P>
       </S.Article>

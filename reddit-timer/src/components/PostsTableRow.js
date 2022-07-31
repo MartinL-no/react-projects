@@ -30,7 +30,7 @@ function PostsTableRow({
 
   return (
     <tr>
-      <S.Td><S.A href={`https://reddit.com${permalink}`} target="_blank" rel="noopener noreferrer">{titleWithLengthControlled}</S.A></S.Td>
+      <S.Td><S.A href={permalink} target="_blank" rel="noopener noreferrer">{titleWithLengthControlled}</S.A></S.Td>
       <S.Td>{timePosted}</S.Td>
       <S.Td>{score}</S.Td>
       <S.Td>{commments}</S.Td>
