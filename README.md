@@ -2,7 +2,7 @@
 
 ## Overview
 
-#### A collection of React projects (ongoing) I have made to develop my understanding of the library
+#### A collection of React projects I have made to develop my understanding of the library
 
 ## Apps
 
